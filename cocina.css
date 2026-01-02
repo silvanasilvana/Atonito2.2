@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #bfb6ab;
+}
+
+/* SECCIÓN PARRILLA */
+.parrilla {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    background-color: #bfb6ab;
+}
+
+/* TÍTULO */
+.parrilla h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    letter-spacing: 2px;
+    color: #3b2f2f;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.parrilla-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* TARJETA */
+.parrilla-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* IMAGEN */
+.parrilla-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* TEXTO */
+.parrilla-card span {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #3b2f2f;
+}
+
+/* LINK SOLO EN LA IMAGEN */
+.parrilla-card a {
+    display: block;
+    text-decoration: none;
+}
+
+/* EFECTO CLICK IMAGEN */
+.parrilla-card a img {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parrilla-card a img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
+
+/* RESPONSIVO TABLET */
+@media (max-width: 900px) {
+    .parrilla-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* RESPONSIVO CELULAR */
+@media (max-width: 768px) {
+    .parrilla {
+        padding: 40px 20px;
+    }
+
+    .parrilla h1 {
+        font-size: clamp(24px, 6vw, 36px);
+        margin-bottom: 30px;
+    }
+
+    .parrilla-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .parrilla-card span {
+        font-size: 14px;
+    }
+
+    .parrilla-card img {
+        border-radius: 16px;
+    }
+}
+
+/* RESPONSIVO CELULAR MUY PEQUEÑO */
+@media (max-width: 500px) {
+    .parrilla h1 {
+        font-size: clamp(20px, 8vw, 28px);
+        margin-bottom: 20px;
+    }
+
+    .parrilla-card span {
+        font-size: 13px;
+    }
+}

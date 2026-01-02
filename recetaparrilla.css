@@ -1,0 +1,285 @@
+/* =========================
+   RESET Y ESTILOS GENERALES
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background: #d7d1c7;
+  background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 4px 4px;
+  color: #3a2e24;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+.receta-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 140px 20px 60px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+.card {
+  background: #c6bfb6;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.principal {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap; /* 🔑 permite que se acomode en móvil */
+}
+
+.principal img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.info h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.info h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+}
+
+.info ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   GRID 2 COLUMNAS
+========================= */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.mini-img {
+  width: 100%;
+  max-width: 220px;
+  margin: 15px auto;
+  border: 2px solid #a59e95;
+  border-radius: 16px;
+  padding: 4px;
+}
+
+.especias {
+  display: flex;
+  flex-wrap: wrap; /* 🔑 que se acomode en móvil */
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.especias div {
+  text-align: center;
+  flex: 1 1 100px; /* ancho mínimo para móviles */
+}
+
+.especias img {
+  width: 100%;
+  max-width: 100px;
+  display: block;
+  margin: 0 auto 8px;
+  border: 2px solid #a59e95;
+  border-radius: 14px;
+  padding: 4px;
+}
+
+button {
+  background: #1f6b4f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #14523c;
+}
+
+.card h4 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.tip {
+  background: #bfb7ad;
+}
+
+/* BOTÓN CARRITO */
+.btn-carrito {
+  margin-top: 4px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #1f6b4f;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-carrito img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.btn-carrito:hover {
+  background: #14523c;
+}
+
+/* =========================
+   BOTÓN COMPRAR ESPECIAS
+========================= */
+.btn-comprar {
+  margin-top: 6px;
+  background: #1f6b4f;
+  color: white;
+  border: none;
+  border-radius: 18px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-comprar:hover {
+  background: #14523c;
+}
+/* =========================
+   MEDIA QUERIES MÓVIL
+========================= */
+@media (max-width: 768px) {
+
+  /* Ajuste contenedor para que el encabezado no se tape por la navbar */
+  .receta-container {
+    padding-top: 120px; /* baja el encabezado */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  /* Principal card: imagen arriba, texto debajo */
+  .principal {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .principal img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Grid de cards secundarios: una columna */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Sección especias: 3 elementos por fila */
+  .especias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .especias div {
+    text-align: center;
+  }
+
+  .especias img {
+    max-width: 80px;
+    margin: 0 auto 5px;
+  }
+
+  /* Titulos y textos más proporcionales */
+  .info h2 {
+    font-size: 1.3rem;
+  }
+
+  .info h3 {
+    font-size: 1.05rem;
+  }
+
+  .info ul,
+  .card ul {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .meta {
+    font-size: 0.8rem;
+    gap: 6px;
+  }
+
+  .btn-comprar,
+  .btn-carrito {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+  .ul-wrapper ul {
+  display: block;       /* lista normal */
+  padding-left: 20px;   /* espacio para bullets */
+  margin: 10px 0;
+  list-style-type: disc;
+}
+
+.ul-wrapper ul li {
+  display: list-item;   /* cada li con bullet */
+  margin-bottom: 5px;
+}
+
+
+}

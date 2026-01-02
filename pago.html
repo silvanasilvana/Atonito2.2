@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout | Carnicería Premium</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pago.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  
+
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+<main class="checkout">
+
+  <!-- COLUMNA IZQUIERDA -->
+  <section class="checkout-left">
+
+    <h2>Contacto</h2>
+    <input type="email" placeholder="Correo electrónico">
+    <label class="checkbox">
+      <input type="checkbox"> Enviarme ofertas y noticias
+    </label>
+
+    <h2>Entrega</h2>
+
+    <select>
+      <option>México</option>
+      <option>Estados Unidos</option>
+    </select>
+
+    <div class="grid-2">
+      <input type="text" placeholder="Nombre">
+      <input type="text" placeholder="Apellido">
+    </div>
+
+    <input type="text" placeholder="Dirección">
+    <input type="text" placeholder="Apartamento, suite, etc. (opcional)">
+
+    <div class="grid-3">
+      <input type="text" placeholder="Ciudad">
+      <input type="text" placeholder="Estado">
+      <input type="text" placeholder="Código postal">
+    </div>
+
+    <input type="tel" placeholder="Teléfono (opcional)">
+
+    <h2>Método de envío</h2>
+    <div class="shipping">
+      Ingresa tu dirección para ver las opciones de envío
+    </div>
+
+    <button class="btn-pay">Pagar ahora</button>
+
+    <p class="secure">🔒 Pago seguro y cifrado</p>
+
+  </section>
+
+  <!-- COLUMNA DERECHA -->
+  <aside class="checkout-right">
+
+    <div class="product">
+      <img src="images/steak1.jpg">
+      <div>
+        <p>New York Añejo Steak</p>
+        <span>$450.00</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="images/steak2.jpg">
+      <div>
+        <p>Rib Eye Añejo Steak</p>
+        <span>$350.00</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="images/steak3.jpg">
+      <div>
+        <p>Arrachera Negra High Choice</p>
+        <span>$959.00</span>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div>
+        <span>Subtotal</span>
+        <span>$1,759.00</span>
+      </div>
+      <div>
+        <span>Envío</span>
+        <span>Calculado en el siguiente paso</span>
+      </div>
+      <div class="total">
+        <span>Total</span>
+        <span>$1,759.00 MXN</span>
+      </div>
+    </div>
+
+  </aside>
+
+</main>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+
+  <!-- SCRIPTS -->
+  <script>
+    fetch('navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar-container').innerHTML = d);
+
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('footer-container').innerHTML = d);
+  </script>
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>

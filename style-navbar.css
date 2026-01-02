@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* HEADER */
+.header {
+  height: 70px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* CONTENEDOR */
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img,
+.logo-img-text {
+  height: 40px;
+}
+
+/* NAVBAR DESKTOP */
+.navbar {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar li a {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 19px;
+  letter-spacing: 2px;
+  color: #007b66;
+  position: relative;
+}
+
+.navbar li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.navbar li a:hover::after {
+  width: 100%;
+}
+
+/* ICONOS */
+.iconos-derecha {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+#img-carrito,
+#img-perfil {
+  width: 33px;
+  object-fit: contain;
+  height: 33px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* SUBMENUS */
+.submenu {
+  position: relative;
+}
+
+#carrito {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  padding: 20px;
+  min-width: 360px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.submenu:hover #carrito {
+  display: block;
+}
+
+.perfil-menu {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  width: 160px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.perfil-container:hover .perfil-menu {
+  display: block;
+}
+
+/* HAMBURGUESA */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-icono {
+  display: none;
+  font-size: 28px;
+  color: #007b66;
+  cursor: pointer;
+}
+
+/* OVERLAY */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  display: none;
+  z-index: 1500;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 991px) {
+
+  .menu-icono {
+    display: block;
+    z-index: 3000;
+  }
+
+  .logo {
+    margin-left: 45px;
+  }
+
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 15px;
+    width: 240px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 14px;
+    padding: 18px 0;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2000;
+  }
+
+  .navbar li a {
+    font-size: 20px;
+    padding: 8px 24px;
+  }
+
+  /* MOSTRAR MENU */
+  .menu-checkbox:checked ~ .navbar {
+    display: flex;
+  }
+
+  /* MOSTRAR OVERLAY */
+  .menu-checkbox:checked ~ .menu-overlay {
+    display: block;
+  }
+  .logo {
+  margin-left: 0px;
+}
+  #img-carrito {
+    transform: translateX(-6px);
+  }
+
+  #img-perfil {
+    transform: translateX(6px);
+  }
+   .iconos-derecha {
+    gap: 0px;
+  }
+
+}

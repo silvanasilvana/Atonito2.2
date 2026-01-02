@@ -1,0 +1,255 @@
+.footer {
+    font-family: 'DM Sans', sans-serif;
+    color: #ffffff;
+}
+
+/* FRANJA PRINCIPAL */
+.footer-top {
+    background-color: #007b66;
+    padding: 40px 60px;
+}
+
+/* MENÚ */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* CONTENIDO CENTRAL */
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* LOGO */
+.footer-logo img {
+    width: 400px;
+}
+
+/* DIVISOR */
+.footer-divider {
+    width: 3px;
+    height: 180px;
+    background-color: #ffffff;
+}
+
+/* TEXTO */
+.footer-info p {
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.footer-info .telefono {
+    margin-top: 20px;
+}
+
+/* FRANJA VERDE OSCURO */
+.footer-bottom {
+    background-color: #115c4c;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.footer-bottom span {
+    margin-left: auto;
+}
+
+/* FRANJA NEGRA */
+.footer-black {
+    background-color: #000000;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer-black .canva {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+
+  /* ========= FOOTER GENERAL ========= */
+  .footer-top {
+    padding: 30px 20px;
+  }
+
+  /* ========= MENÚ SUPERIOR ========= */
+  .footer-nav {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-nav a {
+    font-size: 16px;
+  }
+
+  /* ========= CONTENIDO CENTRAL ========= */
+  .footer-main {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  /* LOGO */
+  .footer-logo img {
+    width: 220px;   /* más chico para móvil */
+  }
+
+  /* DIVISOR → horizontal */
+  .footer-divider {
+    width: 80px;
+    height: 3px;
+  }
+
+  /* TEXTO */
+  .footer-info p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  /* ========= FRANJA VERDE OSCURA ========= */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-bottom a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .footer-bottom span {
+    margin-left: 0;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  /* ========= FRANJA NEGRA ========= */
+  .footer-black {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+/* =============================
+   FOOTER – MOBILE
+============================= */
+@media (max-width: 768px) {
+
+  /* ===== FOOTER GENERAL ===== */
+  .footer {
+    text-align: center;
+  }
+
+  /* ===== FRANJA SUPERIOR ===== */
+  .footer-top {
+    padding: 20px;
+  }
+
+  /* ===== MENU SUPERIOR (HORIZONTAL) ===== */
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .footer-nav a {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* ===== CONTENIDO CENTRAL ===== */
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* ===== LOGO ===== */
+  .footer-logo img {
+    width: 260px;
+    max-width: 90%;
+  }
+
+  /* ===== DIVISOR ===== */
+  .footer-divider {
+    width: 90px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  /* ===== OCULTAR DIRECCIÓN ===== */
+  .footer-info p:not(.telefono) {
+    display: none;
+  }
+
+  /* ===== TELÉFONO ===== */
+  .footer-info .telefono {
+    font-size: 13px;
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ===== FRANJA VERDE OSCURA ===== */
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 18px 20px;
+  }
+
+  /* ❌ OCULTAR TODOS LOS LINKS */
+  .footer-bottom a {
+    display: none;
+  }
+
+  /* COPYRIGHT */
+  .footer-bottom span {
+    font-size: 12px;
+    opacity: 0.85;
+  }
+
+  /* ===== FRANJA NEGRA ===== */
+  .footer-black {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+}

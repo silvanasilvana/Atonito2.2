@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos - Atónito</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="quienessomos.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar-container"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>QUIÉNES SOMOS</h1>
+      <p>Pasión por la carne y el buen sabor en cada corte</p>
+    </div>
+  </section>
+
+  <!-- CARD HISTORIA (COMO REFERENCIA) -->
+  <section class="historia-wrap">
+    <div class="historia-card">
+
+      <!-- TEXTO -->
+      <div class="historia-texto">
+        <h2>Nuestra Historia</h2>
+
+        <p>
+          En Atónito, nos dedicamos a seleccionar los mejores cortes de carne y
+          a ofrecer recetas sencillas para toda la familia. Nuestra pasión por
+          la calidad y el sabor nos ha llevado a crear experiencias gastronómicas únicas.
+        </p>
+
+        <!-- ICONOS INTERNOS -->
+        <ul class="historia-valores">
+          <li>
+            <span class="icon-circle check"></span>
+            <div>
+              <strong>Calidad</strong>
+              <p>Selección de cortes premium.</p>
+            </div>
+          </li>
+
+          <li>
+            <span class="icon-circle fork"></span>
+            <div>
+              <strong>Sabor</strong>
+              <p>Recetas que enamoran.</p>
+            </div>
+          </li>
+
+          <li>
+            <span class="icon-circle fire"></span>
+            <div>
+              <strong>Pasión</strong>
+              <p>Tradición y dedicación en cada preparación.</p>
+            </div>
+          </li>
+        </ul>
+
+        <button class="btn-historia">Conócenos más</button>
+      </div>
+
+      <!-- IMAGEN -->
+      <div class="historia-imagen">
+        <img src="images/quienesomos2.jpg" alt="Parrilla Atónito">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ICONOS GRANDES ABAJO -->
+  <section class="valores-bottom">
+    <div class="valores-grid">
+
+      <div class="valor">
+        <span class="icon-circle big check"></span>
+        <h4>Calidad</h4>
+        <p>Selección de cortes premium.</p>
+      </div>
+
+      <div class="valor">
+        <span class="icon-circle big fork"></span>
+        <h4>Sabor</h4>
+        <p>Recetas que enamoran.</p>
+      </div>
+
+      <div class="valor">
+        <span class="icon-circle big fire"></span>
+        <h4>Pasión</h4>
+        <p>Tradición y dedicación en cada preparación.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-container"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('navbar-container').innerHTML = d);
+
+    fetch('footer.html')
+      .then(r => r.text())
+      .then(d => document.getElementById('footer-container').innerHTML = d);
+  </script>
+
+</body>
+</html>
